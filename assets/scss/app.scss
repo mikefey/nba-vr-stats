@@ -1,0 +1,25 @@
+@import 'mixins';
+@import 'colors';
+@import 'component-app';
+
+body,
+html {
+  @include font-legibility();
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

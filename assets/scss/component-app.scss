@@ -1,0 +1,36 @@
+.component-app {
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  &.message-text-shown {
+    .message-text {
+      display: block;
+    }
+  }
+
+  &.message-text-transitioned-in {
+    .message-text {
+      opacity: 1;
+    }
+  }
+
+  .message-text {
+    @include transition(opacity .2s ease-out);
+    color: $white;
+    display: none;
+    font-family: 'sharebold';
+    font-size: 24px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 40px;
+    width: 100%;
+
+    @media(min-width: 768px) {
+      font-size: 36px;
+    }
+  }
+}
